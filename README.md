@@ -116,21 +116,6 @@ Constrained portfolios, held with fixed weights and rebalanced daily to constant
 └── figures/                            # exported charts used in this README
 ```
 
-## Getting started
-
-Requires **Python 3.12 or later** (the notebook uses f-string syntax that earlier versions do not support).
-
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-jupyter notebook Portfolio_Optimisation_Main.ipynb
-```
-
-Run the notebook from top to bottom. Prices are downloaded live with `yfinance`, so an internet connection is needed. The Monte Carlo step uses a fixed seed (`np.random.seed(5)`), so the random portfolios are reproducible.
-
 ## Method notes
 
 - **Returns:** expected returns and the covariance matrix are estimated from daily **log** returns over the training window and annualised (mean × 252, covariance × 252). Backtest portfolio returns use daily **simple** returns, since a portfolio's return is the weighted average of its assets' simple returns.
