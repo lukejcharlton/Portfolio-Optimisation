@@ -1,0 +1,8 @@
+# Python 3.12 or later is required (the notebook uses nested quotes inside f-strings).
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+scipy>=1.11
+yfinance>=0.2.40
+notebook>=7.0
+ipykernel>=6.25
